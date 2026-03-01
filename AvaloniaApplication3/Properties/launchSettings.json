@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "AvaloniaApplication3": {
+      "commandName": "Project"
+    },
+    "Профиль 1": {
+      "commandName": "Executable"
+    }
+  }
+}

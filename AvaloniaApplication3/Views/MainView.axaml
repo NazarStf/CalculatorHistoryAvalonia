@@ -1,0 +1,28 @@
+﻿<UserControl
+    xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    x:CompileBindings="False"
+    x:Class="AvaloniaApplication3.Views.MainView">
+
+    <StackPanel Margin="20" Spacing="10">
+
+        <TextBlock Text="Калькулятор з історією" FontSize="20"/>
+
+        <TextBox Text="{Binding Input}"/>
+
+        <Button Content="Обчислити"
+                Command="{Binding CalculateCommand}" />
+
+        <TextBlock Text="{Binding ErrorMessage}"
+                   Foreground="Red"/>
+
+        <ListBox ItemsSource="{Binding History}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding Result}" />
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+    </StackPanel>
+</UserControl>
